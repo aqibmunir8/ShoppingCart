@@ -1,8 +1,14 @@
 import { useCart } from "../../context/CartProvider";
 
 function Product({ id, title, price, img }) {
-  const { addItemToCart } = useCart();
+  const { addItemToCart, cart } = useCart();
   function handleAdd() {
+    for (let item of cart) {
+      if (item.id === id) {
+        alert("Item is already inserted!");
+        return;
+      }
+    }
     const newCartItem = {
       id: id,
       price: price,
