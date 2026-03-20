@@ -4,7 +4,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 
 function CartItem({ id, price, img, title, quantity }) {
-  const { increaseQty, decreaseQty, removeItemFromCart } = useCart();
+  const { increaseQty, decreaseQty, delItemToCart } = useCart();
   return (
     <div className={styles.cartItem}>
       {/* left  */}
@@ -40,7 +40,7 @@ function CartItem({ id, price, img, title, quantity }) {
         <button
           className={styles.removeItemBtn}
           onClick={() => {
-            removeItemFromCart(id);
+            delItemToCart(id);
           }}
         >
           <ImCross />
