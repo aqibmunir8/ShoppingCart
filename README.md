@@ -6,6 +6,18 @@ A modern React-based shopping cart application built for learning and demonstrat
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Screenshot](./SS/a.png)
+
+### 🛒 Cart Modal
+
+![Cart Screenshot](./SS/b.png)
+
+---
+
 ## 🚀 Features
 
 - Add items to cart
@@ -99,13 +111,3 @@ This project was built as a **learning + demonstration project** to understand h
 Developed by **Aqib**
 
 ---
-
-## 📸 Screenshots
-
-### 🏠 Home Page
-
-![Home Screenshot](./SS/a.png)
-
-### 🛒 Cart Modal
-
-![Cart Screenshot](./SS/b.png)
