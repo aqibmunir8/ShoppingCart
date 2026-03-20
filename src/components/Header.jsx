@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import Modal from "./UI/Modal";
 import Cart from "./UI/Cart";
+import styles from "./Header.module.css";
+import Container from "./UI/Container";
+import { BsCartFill } from "react-icons/bs";
+import { useCart } from "../../context/CartProvider";
 
 function Header() {
+  const { cart } = useCart();
+  const totalQuantity = cart.reduce((acc, item) => {
+    return acc + item.quantity;
+  }, 0);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   function closeModal() {
@@ -18,17 +27,27 @@ function Header() {
   }, [isModalOpen]);
 
   return (
-    <header>
-      <nav>
-        <h1 className="logo">ARC Shop</h1>
-        <button
-          onClick={() => {
-            setIsModalOpen(true);
-          }}
-        >
-          Show Cart
-        </button>
-      </nav>
+    <header className={styles.header}>
+      <Container>
+        <nav lassName={styles.nav}>
+          <h1 className="logo">ARC Shop</h1>
+          <button
+            className={styles.showCartBtn}
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+          >
+            <span className={styles.cartIconAndNumber}>
+              <BsCartFill />
+              {totalQuantity > 0 && (
+                <span className={styles.number}>{totalQuantity}</span>
+              )}
+            </span>
+
+            <span>Cart</span>
+          </button>
+        </nav>
+      </Container>
 
       {isModalOpen && (
         <Modal closeModal={closeModal}>
