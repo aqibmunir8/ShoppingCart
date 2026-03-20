@@ -1,16 +1,111 @@
-# React + Vite
+# 🛒 ARC Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based shopping cart application built for learning and demonstrating advanced React concepts like state management, context API, reducers, and portals.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [https://arcshoppingcart.netlify.app/](https://arcshoppingcart.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add items to cart
+- Remove items from cart
+- Increase / decrease item quantity
+- Real-time total price calculation
+- Cart modal using React Portal
+- Toast notifications for user feedback
+- Responsive design
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Concepts Used
+
+This project focuses on practical usage of core and advanced React patterns:
+
+- `useReducer` → centralized state management
+- `createContext` & `useContext` → global state sharing
+- React Portal → modal rendering outside DOM hierarchy
+- Component-based architecture
+- Derived state (total amount, total quantity)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Products.jsx
+│   ├── Product.jsx
+│   └── UI/
+│       ├── Cart.jsx
+│       ├── CartItem.jsx
+│       ├── Modal.jsx
+│       └── Container.jsx
+│
+├── context/
+│   └── CartProvider.jsx
+│
+├── data/
+│   └── products.js
+│
+└── App.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone <your-repo-url>
+cd arc-shopping-cart
+npm install
+npm run dev
+```
+
+---
+
+## 📦 Dependencies
+
+- React
+- React DOM
+- React Icons
+- React Toastify
+
+---
+
+## 🧪 Future Improvements
+
+- Persist cart data using localStorage
+- Add authentication system
+- Improve accessibility (keyboard navigation, focus trap)
+- Add unit tests for reducer logic
+- Convert project to TypeScript
+
+---
+
+## 🎯 Purpose
+
+This project was built as a **learning + demonstration project** to understand how scalable state management works in React without external libraries.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Aqib**
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home Screenshot](./SS/a.png)
+
+### 🛒 Cart Modal
+
+![Cart Screenshot](./SS/b.png)
